@@ -1,4 +1,4 @@
-//cd desktop/sei-4
+//cd desktop/sei-4/W01/d2
 /*
 Exercise 1:
   - Define an empty array named foods
@@ -179,5 +179,54 @@ numArrays.forEach(element => {
 
 console.log("Exercise 15 Result:\n", total);
 
+/*
+Exercise - Branching Statements (5 mins)
+Write the if...else..if statement that console.logs the following based upon the value of a variable named color:
+
+If the value is green, log Go
+If the value is yellow, log Slow
+If the value is red, log Stop
+If the value is anything else, log Whatever
+Hint: Don't forget to declare and initialize a variable named color.
+
+As always, be sure to ask your local instructor for help if you get stuck!
+*/
+
+let color = "green";
+
+if(color.includes("green"))
+  console.log("Exercise 16 Result: Go");
+else if(color.includes("yellow"))
+  console.log("Exercise 16 Result: Slow");
+else if(color.includes("yellow"))
+  console.log("Exercise 16 Result: Stop");
+else
+  console.log("Exercise 16 Result: Whatever");
+
+  /*
+Exercise 1 - Branching
+The following JavaScript code will accept string input from the user and store the string in a variable named choice:
+
+ let choice = prompt('Enter a, b or c');
+Write an if statement that console.logs the following messages:
+
+a entered - "a is for apple"
+b entered - "b is for banana"
+c entered - "c is for cantaloupe"
+anything else - "you're a rebel"
+!!!!!const prompt=require("prompt-sync")({sigint:true}); !!!!!!
+  */
+const prompt=require("prompt-sync")({sigint:true}); 
+let choice = prompt("Enter a, b or c:: ");
+
+if(choice.includes("a"))
+  console.log("Exercise 17 Result: a is for apple");
+else if(choice.includes("b"))
+  console.log("Exercise 17 Result: b is for banana");
+else if(choice.includes("c"))
+  console.log("Exercise 17 Result: c is for cantaloupe");
+else
+  console.log("You're a rebel");
 
 
+console.log(typeof /./);

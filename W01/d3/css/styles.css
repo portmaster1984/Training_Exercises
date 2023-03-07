@@ -1,0 +1,23 @@
+body {
+    font-family: "Lucida Grande";
+    color:red;
+    margin: 15px;
+  }
+div{
+    color:blue;
+}
+
+#comments-title{
+    font-size: 28px;
+}
+
+li.super-cool{
+    width:2px;
+    color:rgb(46, 30, 30);
+}
+
+/*note in css you can target the attributes of the elements.*/
+
+[class="crazy super-cool"] p{
+    background-color: red;
+}
