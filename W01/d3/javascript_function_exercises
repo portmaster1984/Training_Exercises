@@ -46,22 +46,84 @@ Define a function, as a function expression, sumArray that takes an array of num
 and returns the sum of those numbers. For example, sumArray([2, 4, 5]); would return 11.
 */
 
+const sumArray = function(a){
+    let sum = 0;
+    a.forEach(element =>{
+        sum = sum + element;
+    })
+    return sum;
+}
+
+console.log(sumArray([5,5,5]));
+
 /*
 Define a function, as a function declaration, multiplyArray that takes an array of numbers 
 and returns the product those numbers. For example, multiplyArray([2, 4, 5]); would return 40.
 */
+function multiplyArray(a){
+    let sum = 1;
+    a.forEach(element =>{
+        sum = sum * element;
+    })
+    return sum;
+}
+
+console.log(multiplyArray([5,5,5]));
+
 /*
 Define a function, as a function expression, numArgs that returns the number of arguments passed to the function when called.
 */
+var numArgs = function(...a){
+    console.log(a.length);
+}
+numArgs(5,5,5)
+
 /*
 Define a function, as a function declaration, reverseString that takes a string, reverses the characters, 
 and returns it. For example, reverseString('rockstar'); would return the string "ratskcor".
 */
+function reverseString(a){
+    let reverse_word = "";
+    let letter_list = a.split("");
+    let x = letter_list.length - 1;
+    while(x > -1){
+        reverse_word += letter_list[x];
+        x--;
+    
+    }
+    return reverse_word;
+}
+console.log(reverseString("abcde"));
 /*
 Define a function, as a function expression, longestStringInArray that takes an array of strings as an argument 
 and returns the length of the longest string.
 */
+var longestStringInArray = function(a){
+    x = 0;
+    a.forEach(element => {
+        if (element.length > x){
+            x = element.length;
+        }
+    })
+    return x;
+}
+
+console.log(longestStringInArray(["absadsadc","abcd","a"]))
+
+
 /*
 Define a function, as a function declaration, stringsLongerThan that takes an array of strings and a number as arguments; 
-and returns an array of the strings that are longer than the number passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
+and returns an array of the strings that are longer than the number passed in. For example, 
+stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
 */
+function stringsLongerThan(arrString,num){
+
+    valid_arr = [];
+    
+    arrString.forEach(element => {
+        element.length > num ? valid_arr.push(element) : "";
+    })
+    return valid_arr;
+}
+
+console.log(stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3));
